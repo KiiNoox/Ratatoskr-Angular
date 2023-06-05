@@ -1,0 +1,207 @@
+<div class="content">
+  <div class="row g-4 mb-9">
+    <div class="col-xl-6">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="line-marker-chart">Your products Orders<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#line-marker-chart" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#line-marker-chart-code" role="button" aria-controls="line-marker-chart-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Bought Date</th>
+                <th>Supplier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+                <td>{{ order.id }}</td>
+                <td>{{ order.productName }}</td>
+                <td>{{ order.price }}</td>
+                <td>{{ order.boughtDate }}</td>
+                <td>{{ order.supplier }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="echart-line-marker-chart-example" style="min-height: 350px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389866"><div style="position: relative; width: 827px; height: 350px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1033" height="437" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 350px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;">
+
+
+
+          </canvas></div><div class=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="area-pieces-chart">Area pieces chart<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#area-pieces-chart" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#area-pieces-chart-code" role="button" aria-controls="area-pieces-chart-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="collapse code-collapse" id="area-pieces-chart-code"><pre class="scrollbar language-html" style="max-height:420px" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/area-pieces-chart.js--&gt;</span>
+<span class="token comment">&lt;!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>echart-area-pieces-chart-example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">min-height</span><span class="token punctuation">:</span>350px</span><span class="token punctuation">"</span></span></span> <span class="token attr-name">data-echart-responsive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-echart-responsive<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+          </div>
+          <div class="p-4 code-to-copy">
+            <!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/area-pieces-chart.js-->
+            <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js-->
+            <div class="echart-area-pieces-chart-example" style="min-height: 350px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389867"><div style="position: relative; width: 827px; height: 350px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1033" height="437" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 350px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="step-line-chart">Step line chart<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#step-line-chart" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#step-line-chart-code" role="button" aria-controls="step-line-chart-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="collapse code-collapse" id="step-line-chart-code"><pre class="scrollbar language-html" style="max-height:420px" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/step-line-chart.js--&gt;</span>
+<span class="token comment">&lt;!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>echart-step-line-chart-example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">min-height</span><span class="token punctuation">:</span>300px</span><span class="token punctuation">"</span></span></span> <span class="token attr-name">data-echart-responsive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-echart-responsive<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+          </div>
+          <div class="p-4 code-to-copy">
+            <!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/step-line-chart.js-->
+            <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js-->
+            <div class="echart-step-line-chart-example" style="min-height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389868"><div style="position: relative; width: 827px; height: 300px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="1033" height="375" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="line-gradient-chart">Line gradient chart<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#line-gradient-chart" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#line-gradient-chart-code" role="button" aria-controls="line-gradient-chart-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="collapse code-collapse" id="line-gradient-chart-code"><pre class="scrollbar language-html" style="max-height:420px" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/line-gradient-chart.js--&gt;</span>
+<span class="token comment">&lt;!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>echart-line-gradient-chart-example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">min-height</span><span class="token punctuation">:</span>300px</span><span class="token punctuation">"</span></span></span> <span class="token attr-name">data-echart-responsive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-echart-responsive<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+          </div>
+          <div class="p-4 code-to-copy">
+            <!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/line-gradient-chart.js-->
+            <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js-->
+            <div class="echart-line-gradient-chart-example" style="min-height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389869"><div style="position: relative; width: 827px; height: 300px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1033" height="375" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="dynamic-line-chart">Dynamic line chart<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#dynamic-line-chart" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#dynamic-line-chart-code" role="button" aria-controls="dynamic-line-chart-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="collapse code-collapse" id="dynamic-line-chart-code"><pre class="scrollbar language-html" style="max-height:420px" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/dynamic-line-chart.js--&gt;</span>
+<span class="token comment">&lt;!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>echart-dynamic-line-chart-example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">min-height</span><span class="token punctuation">:</span>300px</span><span class="token punctuation">"</span></span></span> <span class="token attr-name">data-echart-responsive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-echart-responsive<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+          </div>
+          <div class="p-4 code-to-copy">
+            <!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/dynamic-line-chart.js-->
+            <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js-->
+            <div class="echart-dynamic-line-chart-example" style="min-height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389870"><div style="position: relative; width: 827px; height: 300px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="1033" height="375" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="line-log-chart">Line log chart<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#line-log-chart" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#line-log-chart-code" role="button" aria-controls="line-log-chart-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="collapse code-collapse" id="line-log-chart-code"><pre class="scrollbar language-html" style="max-height:420px" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/line-log-chart.js--&gt;</span>
+<span class="token comment">&lt;!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>echart-line-log-chart-example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">min-height</span><span class="token punctuation">:</span>300px</span><span class="token punctuation">"</span></span></span> <span class="token attr-name">data-echart-responsive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-echart-responsive<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+          </div>
+          <div class="p-4 code-to-copy">
+            <!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/line-log-chart.js-->
+            <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js-->
+            <div class="echart-line-log-chart-example" style="min-height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389871"><div style="position: relative; width: 827px; height: 300px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="1033" height="375" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card shadow-none border border-300" data-component-card="data-component-card">
+        <div class="card-header p-4 border-bottom border-300 bg-soft">
+          <div class="row g-3 justify-content-between align-items-center">
+            <div class="col-12 col-md">
+              <h4 class="text-900 mb-0" data-anchor="data-anchor" id="share-dataset">Share dataset<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#share-dataset" style="padding-left: 0.375em;"></a></h4>
+            </div>
+            <div class="col col-md-auto">
+              <nav class="nav nav-underline justify-content-end doc-tab-nav align-items-center" role="tablist"><button class="btn btn-link px-2 text-900 copy-code-btn" type="button"><svg class="svg-inline--fa fa-copy me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path></svg><!-- <span class="fas fa-copy me-1"></span> Font Awesome fontawesome.com -->Copy Code</button><a class="btn btn-sm btn-phoenix-primary code-btn ms-2 collapsed" data-bs-toggle="collapse" href="#share-dataset-code" role="button" aria-controls="share-dataset-code" aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code me-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>View code</a><a class="btn btn-sm btn-phoenix-primary preview-btn ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>Preview</a></nav>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="collapse code-collapse" id="share-dataset-code"><pre class="scrollbar language-html" style="max-height:420px" tabindex="0"><code class="language-html"><span class="token comment">&lt;!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/share-dataset-chart.js--&gt;</span>
+<span class="token comment">&lt;!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>echart-share-dataset-chart-example<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">min-height</span><span class="token punctuation">:</span>500px</span><span class="token punctuation">"</span></span></span> <span class="token attr-name">data-echart-responsive</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data-echart-responsive<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+          </div>
+          <div class="p-4 code-to-copy">
+            <!-- Find the JS file for the following chart at: src/js/charts/echarts/examples/share-dataset-chart.js-->
+            <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/echarts-example.js-->
+            <div class="echart-share-dataset-chart-example" style="min-height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" data-echart-responsive="data-echart-responsive" _echarts_instance_="ec_1683658389872"><div style="position: relative; width: 827px; height: 500px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1033" height="625" style="position: absolute; left: 0px; top: 0px; width: 827px; height: 500px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+    <div class="toast align-items-center text-white bg-dark border-0 light" id="icon-copied-toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body p-3"></div><button class="btn-close btn-close-white me-2 m-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+
+

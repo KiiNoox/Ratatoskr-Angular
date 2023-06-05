@@ -1,0 +1,62 @@
+<div _ngcontent-rwf-c61="" class="row">
+  <form class="mb-9" #f="ngForm"(submit)="addInquiry()">
+    <div class="row g-3 flex-between-end mb-5">
+      <div class="col-auto">
+        <h2 class="mb-2"></h2>
+        <h5 class="text-700 fw-semi-bold"></h5>
+      </div>    <div class="col-auto"><button class="btn btn-primary mb-2 mb-sm-0"
+        type="submit">Publish Inquiry</button></div>
+
+    </div>
+    <div _ngcontent-rwf-c61="" class="col-12 col-xl-12">
+    <div _ngcontent-rwf-c61="" class="card mb-3">
+      <div _ngcontent-rwf-c61="" class="card-body">
+        <h4 _ngcontent-rwf-c61="" class="card-title mb-4">Create Inquiry</h4>
+        <div _ngcontent-rwf-c61="" class="row g-3">
+          <div _ngcontent-rwf-c61="" class="col-12 col-sm-6 col-xl-12">
+            <div _ngcontent-rwf-c61="" class="mb-xl-4">
+              <h5 _ngcontent-rwf-c61="" class="mb-2 text-1000">Category</h5>
+           <select class="form-select mb-3" aria-label="category" [(ngModel)]="Inquiry.category"
+           [ngModelOptions]="{standalone: true}">
+            <option selected>Categries</option>
+            <option value="Food">Food</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Home">Home</option>
+            <option value="Health">Health</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Toys">Toys</option>
+            <option value="Books">Books</option>
+            <option value="Other">Other</option>
+          </select>
+
+            </div>
+          </div>
+
+          <div _ngcontent-rwf-c61="" class="col-12 col-sm-6 col-xl-12">
+            <div _ngcontent-rwf-c61="" class="mb-xl-4">
+              <h5 _ngcontent-rwf-c61="" class="mb-2 text-1000">Create Date</h5><input _ngcontent-rwf-c61="" type="text"
+                placeholder="Date" class="form-control mb-xl-3" [(ngModel)]="Inquiry.create_date"
+                [ngModelOptions]="{standalone: true}" >
+            </div>
+          </div>
+          <div _ngcontent-rwf-c61="" class="col-12 col-sm-6 col-xl-12">
+            <div _ngcontent-rwf-c61="" class="mb-xl-4">
+              <h5 _ngcontent-rwf-c61="" class="mb-2 text-1000">Description</h5><input _ngcontent-rwf-c61="" type="text"
+                placeholder="Description" class="form-control mb-xl-3" [(ngModel)]="Inquiry.description"
+                [ngModelOptions]="{standalone: true}" >
+            </div>
+          </div>
+          <div _ngcontent-rwf-c61="" class="col-12 col-sm-6 col-xl-12">
+            <div _ngcontent-rwf-c61="" class="mb-xl-4">
+              <h5 _ngcontent-rwf-c61="" class="mb-2 text-1000">Expiration Date</h5><input _ngcontent-rwf-c61="" type="text"
+                placeholder="Date" class="form-control mb-xl-3" [(ngModel)]="Inquiry.expire_date"
+                [ngModelOptions]="{standalone: true}" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form >
+
+</div>

@@ -1,0 +1,152 @@
+
+
+<div class="container content">
+  <nav class="mb-2" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="#!">Pages</a></li>
+      <li class="breadcrumb-item active">Members</li>
+    </ol>
+  </nav>
+  <h2 class="text-bold text-1100 mb-5">Members</h2>
+  <div id="members" data-list='{"valueNames":["customer","email","mobile_number","city","last_active",joined"],"page":5,"pagination":true}'>
+    <div class="row align-items-center justify-content-between g-3 mb-4">
+      <div class="col col-auto">
+        <div class="search-box">
+          <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input class="form-control search-input search" type="search" placeholder="Search members" aria-label="Search">
+            <svg class="svg-inline--fa fa-magnifying-glass search-box-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg><!-- <span class="fas fa-search search-box-icon"></span> Font Awesome fontawesome.com -->
+          </form>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="d-flex align-items-center">
+          <button (click)="download()" class="btn btn-link text-900 me-4 px-0">
+            <svg class="svg-inline--fa fa-file-export fs--1 me-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-export" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+              <path fill="currentColor" d="M192 312C192 298.8 202.8 288 216 288H384V160H256c-17.67 0-32-14.33-32-32L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48v-128H216C202.8 336 192 325.3 192 312zM256 0v128h128L256 0zM568.1 295l-80-80c-9.375-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94L494.1 288H384v48h110.1l-39.03 39.03C450.3 379.7 448 385.8 448 392s2.344 12.28 7.031 16.97c9.375 9.375 24.56 9.375 33.94 0l80-80C578.3 319.6 578.3 304.4 568.1 295z"></path></svg><!-- <span class="fa-solid fa-file-export fs--1 me-2"></span> Font Awesome fontawesome.com -->Export</button>
+          <button class="btn btn-primary" (click)="ResetForm()" data-bs-target="#staticBackdrop"><svg class="svg-inline--fa fa-plus me-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg><!-- <span class="fas fa-plus me-2"></span> Font Awesome fontawesome.com -->Add member</button></div>
+
+      </div>
+    </div>
+    <div class="mx-n4 mx-lg-n6 px-4 px-lg-6 mb-9 bg-white border-y border-300 mt-2 position-relative top-1">
+      <div class="table-responsive scrollbar ms-n1 ps-1">
+        <table class="table table-sm fs--1 mb-0 table-hover">
+          <thead>
+          <tr>
+            <th class="white-space-nowrap fs--1 align-middle ps-0">
+              <div class="form-check mb-0 fs-0"><input class="form-check-input" id="checkbox-bulk-members-select" type="checkbox" data-bulk-select="{&quot;body&quot;:&quot;members-table-body&quot;}"></div>
+            </th>
+            <th class="sort align-middle" scope="col" data-sort="customer" style="width:15%; min-width:200px;">CUSTOMER</th>
+            <th class="sort align-middle" scope="col" data-sort="email" style="width:15%; min-width:200px;">EMAIL</th>
+            <th class="sort align-middle pe-3" scope="col" data-sort="mobile_number" style="width:20%; min-width:200px;">MOBILE NUMBER</th>
+            <th class="sort align-middle" scope="col" data-sort="adress" style="width:10%;">ADRESS</th>
+            <th class="sort align-middle " scope="col" data-sort="last_active" style="width:21%;  min-width:200px;">LAST ACTIVE</th>
+            <th class="sort align-middle pe-0" scope="col" data-sort="joined" style="width:19%;  min-width:200px;">JOINED</th>
+            <th class="sort text-end align-middle pe-0 border-top" scope="col">ACTION</th>
+          </tr>
+          </thead>
+          <tbody class="list" id="members-table-body" >
+          <tr class="hover-actions-trigger btn-reveal-trigger position-static" *ngFor="let user of UserList ">
+            <td class="fs--1 align-middle ps-0 py-3">
+              <div class="form-check mb-0 fs-0"><input class="form-check-input" type="checkbox" data-bulk-select-row="{&quot;customer&quot;:{&quot;avatar&quot;:&quot;/team/32.webp&quot;,&quot;name&quot;:&quot;Carry Anna&quot;},&quot;email&quot;:&quot;annac34@gmail.com&quot;,&quot;mobile&quot;:&quot;+912346578&quot;,&quot;city&quot;:&quot;Budapest&quot;,&quot;lastActive&quot;:&quot;34 min ago&quot;,&quot;joined&quot;:&quot;Dec 12, 12:56 PM&quot;}"></div>
+            </td>
+            <td class="customer align-middle white-space-nowrap"><a class="d-flex align-items-center text-900 text-hover-1000" href="#!">
+              <div class="avatar avatar-m"><img class="rounded-circle" src="../assets/img/team/avatar.webp" alt=""></div>
+              <h6 class="mb-0 ms-3 fw-semi-bold">{{user.firstName}} {{user.lastName}} </h6>
+            </a></td>
+            <td class="email align-middle white-space-nowrap"><a class="fw-semi-bold" href="mailto:annac34@gmail.com">{{user.email}}</a></td>
+            <td class="mobile_number align-middle white-space-nowrap"><a class="fw-bold text-1100" href="tel:{{user.phoneNumber}}">{{user.phoneNumber}}</a></td>
+            <td class="city align-middle white-space-nowrap text-900">{{user.adress}}</td>
+            <td class="last_active align-middle white-space-nowrap text-700">n/a</td>
+            <td class="joined align-middle white-space-nowrap text-700">{{user.joined}}</td>
+            <td class="align-middle white-space-nowrap text-700 text-end pe-0">
+              <div class="font-sans-serif btn-reveal-trigger position-static"><button class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2" type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span class="fas fa-ellipsis-h fs--2"></span></button>
+                <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item" (click)="ViewUserProfile(user.email)">View</a><a class="dropdown-item" (click)="EditUserProfile(user.email!)">Edit</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item text-danger" *ngIf="user.enabled" (click)="DisableUser(user.email!)">Disable</a>
+                  <a class="dropdown-item text-info" *ngIf="!user.enabled" (click)="EnableUser(user.email!)">Enable</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row align-items-center justify-content-between py-2 pe-0 fs--1">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="staticBackdrop" tabindex="-1" data-bs-backdrop="static" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title text-white" id="staticBackdropLabel">Create an account</h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1 text-white"></span></button>
+      </div>
+      <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="save(f)">
+          <div class="mb-3 text-start"><label class="form-label" for="name">Name</label><input name="firstName" ngModel class="form-control" id="name" type="text" placeholder="Name" value="{{this.Currentuser?.firstName}}"/></div>
+          <div class="mb-3 text-start"><label class="form-label" for="email">Email address</label><input name="email" ngModel class="form-control" id="email" type="email" placeholder="name@example.com" value="{{this.Currentuser?.email}}"/></div>
+          <div class="mb-3 text-start">
+            <label class="form-label" for="birthDate">Date of birth</label>
+            <!--                  <ng2-flatpickr ngModel name="birthDate"  data-options='{minDate: "today, dateFormat: "Y-m-d",disable: ["2023-04-27", "2025-02-21", "2025-03-08", new Date(2025, 4, 9) ],}'></ng2-flatpickr>-->
+
+            <input class="form-control datetimepicker flatpickr-input" ngModel name="birthDate" id="datepicker" type="datexd" placeholder="yyyy/mm/dd" value="{{this.Currentuser?.birthDate}}">
+
+          </div>
+          <div class="mb-3 text-start">
+            <label class="form-label" for="Adress" >Adress</label>
+            <input class="form-control" type="text" placeholder="Adress" aria-label="Adress" name="adress" ngModel value="{{this.Currentuser?.adress}}"/>
+          </div>
+          <div class="row g-3">
+            <div class="col-sm-7">
+              <label class="form-label" for="PhoneNumber" >Phone Number</label>
+              <input class="form-control" type="text" placeholder="PhoneNumber" aria-label="PhoneNumber" name="phoneNumber" ngModel value="{{this.Currentuser?.phoneNumber}}"/>
+            </div>
+            <div class="col-sm">
+              <label class="form-label" for="country">Country</label>
+              <select class="form-select form-select-sm" aria-label="country" name="country" ngModel >
+                <option value="{{this.Currentuser?.country}}"> {{this.Currentuser?.country}}</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="France">France</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="row g-3 mb-3">
+            <div class="col-md-6"><label class="form-label" for="password">Password</label><input name="password" ngModel class="form-control form-icon-input" id="password" type="password" placeholder="Password" /></div>
+            <div class="col-md-6"><label class="form-label" for="confirmPassword">Confirm Password</label><input class="form-control form-icon-input" id="confirmPassword" type="password" placeholder="Confirm Password" /></div>
+          </div>
+          <!--          Roles  -->
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" id="adminbox" type="checkbox" (change)="toggleEditable($event)" value="Admin" [checked]="this.Currentuser?.roles" (click)="toggleEditable($event)"/>
+            <label class="form-check-label" for="adminbox">Admin</label>
+          </div>
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" id="deliverybox" type="checkbox" (change)="toggleEditable($event)" value="Delivery"/>
+            <label class="form-check-label" for="deliverybox">Delivery</label>
+          </div>
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" id="providerbox" type="checkbox" (change)="toggleEditable($event)" value="Provider"/>
+            <label class="form-check-label" for="providerbox">Provider</label>
+          </div>
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" id="userbox" type="checkbox" checked="" disabled="" value="User"/>
+            <label class="form-check-label" for="userbox">User</label>
+          </div>
+
+
+          <!--          End Roles-->
+
+          <div class="form-check mb-3"><input class="form-check-input" id="termsService" type="checkbox" /><label class="form-label fs--1 text-none" for="termsService">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label></div><button class="btn btn-primary w-100 mb-3" type="submit" data-bs-dismiss="modal" id="submodaluser">Create Account</button>
+        </form>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Cancel</button></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

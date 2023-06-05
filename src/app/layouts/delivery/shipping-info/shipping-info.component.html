@@ -1,0 +1,272 @@
+<main _ngcontent-cgd-c24="" id="top" class="main">
+  <section _ngcontent-cgd-c24="" class="pt-5 pb-9">
+    <div _ngcontent-cgd-c24="" class="container-small cart">
+      <nav _ngcontent-cgd-c24="" aria-label="breadcrumb" class="mb-2">
+        <ol _ngcontent-cgd-c24="" class="breadcrumb mb-0">
+          <li _ngcontent-cgd-c24="" class="breadcrumb-item">
+            <a style="color: black;" _ngcontent-cgd-c24="" routerLink="/">Home</a>
+          </li>
+          <li style="color: blue;" _ngcontent-cgd-c24="" class="breadcrumb-item">
+             Shopping Card 
+          </li>
+          <li style="opacity: 0.8;"  _ngcontent-cgd-c24="" aria-current="page" class="breadcrumb-item active">
+             Payment 
+          </li>
+          <li style="opacity: 0.8;" _ngcontent-cgd-c24="" class="breadcrumb-item ">
+    Order tracking 
+          </li>
+        </ol>
+      </nav>
+      <h2 _ngcontent-cgd-c24="" class="mb-5">Check out</h2>
+      <div _ngcontent-cgd-c24="" class="row">
+        <div _ngcontent-cgd-c24="" class="col-lg-7 mb-4 mb-lg-0">
+          <form #useremail="ngForm" _ngcontent-cgd-c24="">
+            <h3 _ngcontent-cgd-c24="" class="mb-5">Shipping Info</h3>
+            <div _ngcontent-cgd-c24="" class="row g-4">
+              <div _ngcontent-cgd-c24="" class="col-12">
+                <label
+                  _ngcontent-cgd-c24=""
+                  for="inputName"
+                  class="form-label fs-0 text-1000 ps-0 text-none"
+                  >Full name</label
+                ><input
+                  _ngcontent-cgd-c24=""
+                  id="inputName"
+                  type="text"
+                  value="{{ currentUser?.firstName }} {{
+                    currentUser?.lastName
+                  }}"
+                  placeholder="Full name"
+                  class="form-control"
+                />
+              </div>
+              <div _ngcontent-cgd-c24="" class="col-md-6">
+                <label
+                  _ngcontent-cgd-c24=""
+                  for="inputEmail"
+                  class="form-label fs-0 text-1000 ps-0 text-none"
+                  >Email</label
+                ><input
+                  _ngcontent-cgd-c24=""
+                  id="inputEmail"
+                  type="email"
+                  value="{{ currentUser?.email }}"
+                  placeholder="Email"
+                  class="form-control"
+                />
+              </div>
+              <div _ngcontent-cgd-c24="" class="col-md-6">
+                <label
+                  _ngcontent-cgd-c24=""
+                  for="inputPhone"
+                  class="form-label fs-0 text-1000 ps-0 text-none"
+                  >Phone</label
+                ><input
+                  _ngcontent-cgd-c24=""
+                  id="inputPhone"
+                  type="tel"
+                  [value]="currentUser?.phoneNumber"
+                  placeholder="+1234567890"
+                  class="form-control"
+                />
+              </div>
+              <div _ngcontent-cgd-c24="" class="col-md-4">
+                <label
+                  _ngcontent-cgd-c24=""
+                  for="inputCity"
+                  class="form-label fs-0 text-1000 ps-0 text-none"
+                  >Address</label
+                ><select
+                  _ngcontent-cgd-c24=""
+                  id="inputCity"
+                  class="form-select text-black"
+                >
+                  <option _ngcontent-cgd-c24="" selected="selected">
+                    Ibn Sina
+                  </option>
+                  <option _ngcontent-cgd-c24="" value="los-angeles">
+                    Ariana
+                  </option>
+                  <option _ngcontent-cgd-c24="" value="chicago">
+                    Bardo Tunisie
+                  </option>
+                  <option _ngcontent-cgd-c24="" value="houston">Bizerte</option>
+                  <option _ngcontent-cgd-c24="" value="houston">Gafsa</option>
+                </select>
+              </div>
+
+              <div _ngcontent-cgd-c24="" class="col-12">
+                <button (click) ="saveOrder()"
+                 
+                  _ngcontent-cgd-c24=""
+                  type="submit"
+                  class="btn btn-primary px-8 px-sm-11 me-2"
+                  routerLink="/delivery/payment" >
+                  Payment </button
+                ><button routerLink="/"
+                  _ngcontent-cgd-c24=""
+                  type="submit"
+                  class="btn btn-phoenix-secondary text-nowrap"
+                >
+                  Exit Without Saving
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div _ngcontent-cgd-c24="" class="col-lg-5 col-xl-4 offset-xl-1">
+          <div _ngcontent-cgd-c24="" class="card mt-3 mt-lg-0">
+            <div _ngcontent-cgd-c24="" class="card-body">
+              <div
+                _ngcontent-cgd-c24=""
+                class="d-flex align-items-center justify-content-between"
+              >
+                <h3 _ngcontent-cgd-c24="" class="mb-0">Products In Card</h3>
+              </div>
+              <div
+                _ngcontent-cgd-c24=""
+                class="border-dashed border-bottom mt-4"
+              >
+                <div _ngcontent-cgd-c24="" class="mx-n2">
+                  <div
+                    _ngcontent-cgd-c24=""
+                    class="row align-items-center mb-5 g-3"
+                    *ngFor="let item of shoppingCart?.products"
+                  >
+                    <div _ngcontent-cgd-c24="" class="col-7 col-md-7 col-lg-7">
+                      <div
+                        _ngcontent-cgd-c24=""
+                        class="d-flex align-items-center"
+                      >
+                        <a (click)="removeProduct(item.product)">
+                          <span _ngcontent-cgd-c24="" class="remove-product">
+                            <i
+                              _ngcontent-cgd-c24=""
+                              style="color: red"
+                              class="fas fa-times"
+                            ></i>
+                          </span>
+                        </a>
+                        <img
+                          _ngcontent-cgd-c24=""
+                          src="../../../assets/img/products/3.png"
+                          width="40"
+                          alt=""
+                          class="me-2 ms-1"
+                        />
+                        <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                          {{ item.product.nameProducts }}
+                        </h5>
+                      </div>
+                    </div>
+                    <div _ngcontent-cgd-c24="" class="col-1 col-md-2 col-lg-2">
+                      <h6 _ngcontent-cgd-c24="" class="fs--2 mb-0">
+                        x{{ item.count }}
+                      </h6>
+                    </div>
+                    <div _ngcontent-cgd-c24="" class="col-3 ps-0">
+                      <h5
+                        _ngcontent-cgd-c24=""
+                        class="mb-0 fw-semi-bold text-end text-lg-start"
+                      >
+                        ${{ item.product.price }}
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                _ngcontent-cgd-c24=""
+                class="border-dashed border-bottom mt-4"
+              >
+                <div
+                  _ngcontent-cgd-c24=""
+                  class="d-flex justify-content-between mb-2"
+                >
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    Items subtotal:
+                  </h5>
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    ${{ shoppingCart?.total }}
+                  </h5>
+                </div>
+                <!-- <div _ngcontent-cgd-c24="" class="d-flex justify-content-between mb-2">
+                                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">Discount: </h5>
+                                  <h5 _ngcontent-cgd-c24="" class="text-danger fw-semi-bold">-$59</h5>
+                              </div> -->
+                <div
+                  _ngcontent-cgd-c24=""
+                  class="d-flex justify-content-between mb-2"
+                >
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    Tax:
+                  </h5>
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    ${{ shoppingCart?.totalTax }}
+                  </h5>
+                </div>
+                <div
+                  _ngcontent-cgd-c24=""
+                  class="d-flex justify-content-between mb-2"
+                >
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    Subtotal
+                  </h5>
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    ${{ shoppingCart?.totalAfterTax }}
+                  </h5>
+                </div>
+                <div
+                  _ngcontent-cgd-c24=""
+                  class="d-flex justify-content-between mb-3"
+                >
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">
+                    Shipping Cost
+                  </h5>
+                  <h5 _ngcontent-cgd-c24="" class="text-900 fw-semi-bold">0</h5>
+                </div>
+              </div>
+              <div
+                _ngcontent-cgd-c24=""
+                class="d-flex justify-content-between border-dashed-y pt-3"
+              >
+                <h4 _ngcontent-cgd-c24="" class="mb-0">Total :</h4>
+                <h4 _ngcontent-cgd-c24="" class="mb-0">
+                  ${{ shoppingCart?.totalAfterTax }}
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section _ngcontent-cgd-c24="" class="bg-100 dark__bg-1100 py-9"></section>
+  <footer _ngcontent-cgd-c24="" class="footer position-relative">
+    <div
+      _ngcontent-cgd-c24=""
+      class="row g-0 justify-content-between align-items-center h-100"
+    >
+      <div _ngcontent-cgd-c24="" class="col-12 col-sm-auto text-center">
+        <p _ngcontent-cgd-c24="" class="mb-0 mt-2 mt-sm-0 text-900">
+          Thank you for creating with Phoenix<span
+            _ngcontent-cgd-c24=""
+            class="d-none d-sm-inline-block"
+          ></span
+          ><span _ngcontent-cgd-c24="" class="d-none d-sm-inline-block mx-1"
+            >|</span
+          ><br _ngcontent-cgd-c24="" class="d-sm-none" />2023 ©<a
+            _ngcontent-cgd-c24=""
+            href="https://themewagon.com/"
+            class="mx-1"
+            >Themewagon</a
+          >
+        </p>
+      </div>
+      <div _ngcontent-cgd-c24="" class="col-12 col-sm-auto text-center">
+        <p _ngcontent-cgd-c24="" class="mb-0 text-600">v1.11.0</p>
+      </div>
+    </div>
+  </footer>
+</main>

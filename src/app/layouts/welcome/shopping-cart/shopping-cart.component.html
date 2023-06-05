@@ -1,0 +1,93 @@
+<div class="container-small cart">
+  <nav class="mb-2" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="#!">Page 1</a></li>
+      <li class="breadcrumb-item"><a href="#!">Page 2</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Default</li>
+    </ol>
+  </nav>
+  <h2 class="mb-6">Cart</h2>
+  <div class="row g-5">
+    <div class="col-12 col-lg-8">
+      <div id="cartTable" data-list="{&quot;valueNames&quot;:[&quot;products&quot;,&quot;color&quot;,&quot;size&quot;,&quot;price&quot;,&quot;quantity&quot;,&quot;total&quot;],&quot;page&quot;:10}">
+        <div class="table-responsive scrollbar mx-n1 px-1">
+          <table class="table fs--1 mb-0 border-top border-200">
+            <thead>
+              <tr>
+                <th class="sort white-space-nowrap align-middle fs--2" scope="col"></th>
+                <th class="sort white-space-nowrap align-middle" scope="col" style="min-width:250px;">PRODUCTS</th>
+                <th class="sort align-middle" scope="col" style="width:80px;">DESCRIPTION</th>
+                <th class="sort align-middle text-end" scope="col" style="width:300px;">CATEGORY</th>
+                <th class="sort align-middle text-end" scope="col" style="width:250px;">PRICE</th>
+                <th class="sort text-end align-middle pe-0" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="list" id="cart-table-body">
+              <tr class="cart-table-row btn-reveal-trigger" *ngFor="let sc of productlist" >
+                <td class="align-middle white-space-nowrap py-0">
+                  <div class="border rounded-2"><img src="../../../assets/img/products/1.png" alt="" width="53"></div>
+                </td>
+                <td class="products align-middle"><a class="fw-semi-bold mb-0 line-clamp-2" href="#!">{{sc.nameProducts}}</a></td>
+                <td class="color align-middle white-space-nowrap fs--1 text-900">{{sc.description}}</td>
+                <td class="price align-middle text-900 fs--1 fw-semi-bold text-end">{{sc.category}}</td>
+                <td class="total align-middle fw-bold text-1000 text-end">{{sc.price}}</td>
+                <td class="align-middle white-space-nowrap text-end pe-0 ps-3"><button class="btn btn-sm text-500 hover-text-600 me-2" (click)="onDelete(shid,sc.idProducts)">
+                  <svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"></path></svg><!-- <span class="fas fa-trash"></span> Font Awesome fontawesome.com --></button></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-between-center mb-3">
+            <h3 class="card-title mb-0">Summary</h3><a class="btn btn-link p-0" href="#!">Edit cart </a>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between">
+              <p class="text-900 fw-semi-bold">Quantity :</p>
+              <p class="text-1100 fw-semi-bold">{{quantity}}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-900 fw-semi-bold"> </p>
+              <p class="text-danger fw-semi-bold"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-900 fw-semi-bold"></p>
+              <p class="text-1100 fw-semi-bold"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-900 fw-semi-bold"></p>
+              <p class="text-1100 fw-semi-bold"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-900 fw-semi-bold"></p>
+              <p class="text-1100 fw-semi-bold"></p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between border-y border-dashed py-3 mb-4">
+            <h4 class="mb-0">Total :</h4>
+            <h4 class="mb-">{{totalPrice}} TND</h4>
+          </div>
+          <div class="d-flex justify-content-between border-y border-dashed py-3 mb-4">
+            <h4 class="mb-0">EUR :</h4>
+            <h4 class="mb-">{{convertedEUR}} €</h4>
+          </div>
+          <div class="d-flex justify-content-between border-y border-dashed py-3 mb-4">
+            <h4 class="mb-0">USD :</h4>
+            <h4 class="mb-">{{convertedUSD}} $</h4>
+          </div>
+          <div class="d-flex justify-content-between border-y border-dashed py-3 mb-4">
+            <h4 class="mb-0">GBP :</h4>
+            <h4 class="mb-">{{convertedGBP}} £</h4>
+          </div>
+          <button class="btn btn-primary w-100">Create Order<svg class="svg-inline--fa fa-chevron-right ms-1 fs--2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path></svg><!-- <span class="fas fa-chevron-right ms-1 fs--2"></span> Font Awesome fontawesome.com --></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

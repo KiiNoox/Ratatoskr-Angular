@@ -1,0 +1,33 @@
+<div class="container-small cart">
+
+  <h2 class="mb-5">Inquiry List<span class="text-700 fw-normal ms-2"></span></h2>
+  <div class="border-y" id="productWishlistTable" data-list="{&quot;valueNames&quot;:[&quot;products&quot;,&quot;color&quot;,&quot;size&quot;,&quot;price&quot;,&quot;quantity&quot;,&quot;total&quot;],&quot;page&quot;:5,&quot;pagination&quot;:true}">
+    <div class="table-responsive scrollbar">
+      <table class="table fs--1 mb-0">
+        <thead>
+          <tr>
+            <th class="sort white-space-nowrap align-middle fs--2" scope="col" style="width:7%;"></th>
+            <th class="sort white-space-nowrap align-middle" scope="col" style="width:30%; min-width:250px;" data-sort="Description">Description</th>
+            <th class="sort align-right" scope="col" data-sort="Category" style="width:50%;">Category</th>
+            <th class="sort align-middle text-end pe-0" scope="col" style="width:35%;"> </th>
+          </tr>
+        </thead>
+        <tbody class="list" id="profile-wishlist-table-body">
+          <tr class="hover-actions-trigger btn-reveal-trigger position-static"  *ngFor="let inc of (inquirylist)">
+            <td class="align-middle white-space-nowrap ps-0 py-0">
+            </td>
+            <td class="products align-middle pe-11"><a class="fw-semi-bold mb-0 line-clamp-1" > {{inc.description}}</a></td>
+            <td class="color align-middle white-space-nowrap fs--1 text-900">{{inc.category}}</td>
+            <td class="price align-middle text-900 fs--1 fw-semi-bold text-end"></td>
+            <td class="total align-middle fw-bold text-1000 text-end text-nowrap pe-0">
+              <button class="btn btn-sm text-500 hover-text-600 me-2" (click)="onDelete(inc.idInquiry)"><svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false"
+                data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                <path fill="currentColor"
+                d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"></path></svg><!-- <span class="fas fa-trash"></span> Font Awesome fontawesome.com --></button>
+                <button class="btn btn-primary fs--2"[routerLink]="['inquiry-products', inc.idInquiry]"><svg class="svg-inline--fa fa-cart-shopping me-1 fs--2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"></path></svg><!-- <span class="fas fa-shopping-cart me-1 fs--2"></span> Font Awesome fontawesome.com -->View Products</button></td>
+          </tr></tbody>
+      </table>
+    </div>
+
+    </div>
+  </div>

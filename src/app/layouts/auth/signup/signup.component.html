@@ -1,0 +1,79 @@
+<!-- ===============================================-->
+<!--    Main Content-->
+    <!-- ===============================================-->
+
+      <div class="container-fluid px-0" data-layout="container">
+        <div class="container">
+          <div class="row flex-center min-vh-100 py-5">
+            <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index.html">
+                <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="../../../assets/img/icons/logo.png" alt="phoenix" width="58" /></div>
+              </a>
+              <div class="text-center mb-7">
+                <h3 class="text-1000">Sign Up</h3>
+                <p class="text-700">Create your account today</p>
+              </div><button class="btn btn-phoenix-secondary w-100 mb-3"><span class="fab fa-google text-danger me-2 fs--1"></span>Sign up with google</button><button class="btn btn-phoenix-secondary w-100"><span class="fab fa-facebook text-primary me-2 fs--1"></span>Sign up with facebook</button>
+              <div class="position-relative mt-4">
+                <hr class="bg-200" />
+                <div class="divider-content-center">or use email</div>
+              </div>
+              <form #f="ngForm" (ngSubmit)="save(f)"  class="needs-validation novalidate">
+                <div class="mb-3 text-start">
+                  <label class="form-label" for="firstName">First Name</label><input name="firstName" ngModel class="form-control" id="name" type="text" placeholder="First Name" required/>
+                  <label class="form-label" for="lastName">Last Name</label><input name="lastName" ngModel class="form-control" id="name" type="text" placeholder="Last Name" required/>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3 text-start"><label class="form-label" for="email">Email address</label><input name="email" ngModel class="form-control" id="email" type="email" placeholder="name@example.com" (focusout)="CheckEmail()" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                  <div class="invalid-feedback"  id="email-feedback">Please enter a valid email adress.</div>
+                </div>
+                <div class="mb-3 text-start">
+                <label class="form-label" for="birthDate">Date of birth</label>
+<!--                  <ng2-flatpickr ngModel name="birthDate"  data-options='{minDate: "today, dateFormat: "Y-m-d",disable: ["2023-04-27", "2025-02-21", "2025-03-08", new Date(2025, 4, 9) ],}'></ng2-flatpickr>-->
+
+                  <input class="form-control datetimepicker flatpickr-input" ngModel name="birthDate" id="datepicker" type="datexd" placeholder="yyyy/mm/dd" required/>
+                  <div class="invalid-feedback">Please select your date of birth.</div>
+                </div>
+                <div class="mb-3 text-start">
+                  <label class="form-label" for="Adress" >Adress</label>
+                  <input class="form-control" type="text" placeholder="Adress" aria-label="Adress" name="adress" ngModel/>
+                </div>
+                <div class="row g-3">
+                  <div class="col-sm-7">
+                    <label class="form-label" for="PhoneNumber" >Phone Number</label>
+                    <input class="form-control" type="text" placeholder="PhoneNumber" aria-label="PhoneNumber" name="phoneNumber" required ngModel pattern="[0-9]{8}"/>
+                    <div class="invalid-feedback">Please enter a valid number.</div>
+                  </div>
+                  <div class="col-sm">
+                    <label class="form-label" for="country">Country</label>
+                    <select class="form-select form-select-sm " aria-label="country" name="country" ngModel required >
+                      <option value="Tunisia">Tunisia</option>
+                      <option value="UK">UK</option>
+                      <option value="USA">USA</option>
+                      <option value="France">France</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a valid country.</div>
+                  </div>
+                </div>
+
+
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6"><label class="form-label" for="password">Password</label><input name="password" ngModel #password1="ngModel" class="form-control form-icon-input" id="password" type="password" placeholder="Password" required (change)="Passwordcheck()"/>
+                    <div class="invalid-feedback" id="passwordfeedback">Please select a valid password.</div>
+                  </div>
+                  <div class="col-md-6"><label class="form-label" for="confirmPassword">Confirm Password</label><input ngModel #password2="ngModel" class="form-control form-icon-input" id="confirmPassword" type="password" placeholder="Confirm Password" required (change)="Passwordcheck()"/>
+                  </div>
+
+                </div>
+                <div class="form-check mb-3"><input class="form-check-input" id="termsService" type="checkbox"  required="" value=""/><label class="form-label fs--1 text-none" for="termsService">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label>
+                  <div class="invalid-feedback mt-0">You must agree before submitting.</div>
+                </div><button class="btn btn-primary w-100 mb-3" type="submit">Sign up</button>
+                <div class="text-center"><a class="fs--1 fw-bold" [routerLink]="['/auth/sign-in']">Sign in to an existing account</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
